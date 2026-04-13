@@ -1,9 +1,9 @@
 data_pasien = data_pasien = [
-    {"id": 1, "nama": "Anto", "umur": 25, "penyakit": "Flu"},
-    {"id": 2, "nama": "Ben", "umur": 30, "penyakit": "Demam"},
-    {"id": 3, "nama": "Calvin", "umur": 22, "penyakit": "Batuk"},
-    {"id": 4, "nama": "Doni", "umur": 28, "penyakit": "Asma"},
-    {"id": 5, "nama": "Edo", "umur": 35, "penyakit": "Diabetes"}
+    {"id": 1, "nama": "Alvin", "umur": 23, "penyakit": "Flu"},
+    {"id": 2, "nama": "Caca", "umur": 18, "penyakit": "Demam"},
+    {"id": 3, "nama": "Natasha", "umur": 19, "penyakit": "Batuk"},
+    {"id": 4, "nama": "Frans", "umur": 25, "penyakit": "Asma"},
+    {"id": 5, "nama": "Leo", "umur": 58, "penyakit": "Diabetes"}
 ]
 
 # VALIDASI UMUR (0–100)
