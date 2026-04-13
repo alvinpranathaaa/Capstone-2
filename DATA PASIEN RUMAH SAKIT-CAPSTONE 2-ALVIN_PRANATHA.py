@@ -1,4 +1,10 @@
-data_pasien = []
+data_pasien = data_pasien = [
+    {"id": 1, "nama": "Anto", "umur": 25, "penyakit": "Flu"},
+    {"id": 2, "nama": "Ben", "umur": 30, "penyakit": "Demam"},
+    {"id": 3, "nama": "Calvin", "umur": 22, "penyakit": "Batuk"},
+    {"id": 4, "nama": "Doni", "umur": 28, "penyakit": "Asma"},
+    {"id": 5, "nama": "Edo", "umur": 35, "penyakit": "Diabetes"}
+]
 
 # VALIDASI UMUR (0–100)
 def input_umur(prompt):
@@ -6,11 +12,11 @@ def input_umur(prompt):
         try:
             umur = int(input(prompt))
             if umur < 0 or umur > 100:
-                print("❌ Umur harus antara 0 - 100!")
+                print("Umur harus antara 0 - 100!")
                 continue
             return umur
         except ValueError:
-            print("❌ Input harus berupa angka (integer)!")
+            print("Input harus berupa angka (integer)!")
 
 # VALIDASI ID (INTEGER + UNIQUE)
 def input_id():
@@ -18,11 +24,11 @@ def input_id():
         try:
             id_pasien = int(input("ID Pasien: "))
             if any(p["id"] == id_pasien for p in data_pasien):
-                print("❌ ID sudah digunakan! Masukkan ID lain.")
+                print("ID sudah digunakan! Masukkan ID lain.")
                 continue
             return id_pasien
         except ValueError:
-            print("❌ ID harus berupa angka (integer)!")
+            print("ID harus berupa angka (integer)!")
 
 # TAMPILKAN TABEL + SORTING ID
 def tampilkan_tabel(data):
@@ -60,7 +66,7 @@ def tambah_pasien():
     }
 
     data_pasien.append(pasien)
-    print("✅ Data berhasil ditambahkan!")
+    print("Data berhasil ditambahkan!")
 
 # READ
 def tampilkan_pasien():
@@ -72,7 +78,7 @@ def update_pasien():
     try:
         id_pasien = int(input("Masukkan ID pasien: "))
     except ValueError:
-        print("❌ ID harus angka!")
+        print("ID harus angka!")
         return
 
     for p in data_pasien:
@@ -80,10 +86,10 @@ def update_pasien():
             p["nama"] = input("Nama baru: ")
             p["umur"] = input_umur("Umur baru: ")
             p["penyakit"] = input("Penyakit baru: ")
-            print("✅ Data berhasil diupdate!")
+            print("Data berhasil diupdate!")
             return
 
-    print("❌ ID tidak ditemukan.")
+    print("ID tidak ditemukan.")
 
 # DELETE
 def hapus_pasien():
@@ -91,7 +97,7 @@ def hapus_pasien():
     try:
         id_pasien = int(input("Masukkan ID pasien: "))
     except ValueError:
-        print("❌ ID harus angka!")
+        print("ID harus angka!")
         return
 
     for p in data_pasien:
@@ -100,7 +106,7 @@ def hapus_pasien():
             print("🗑️ Data berhasil dihapus!")
             return
 
-    print("❌ ID tidak ditemukan.")
+    print("ID tidak ditemukan.")
 
 # SEARCH
 def cari_pasien():
@@ -145,7 +151,7 @@ def menu():
             print("Terima kasih!")
             break
         else:
-            print("❌ Pilihan tidak valid.")
+            print("Pilihan tidak valid.")
 
 # RUN
 menu()
